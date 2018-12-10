@@ -1,0 +1,17 @@
+# serverless.yml
+
+
+service: tax-service
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+functions:
+  tax:
+    handler: handler.tax
+    events:
+      - http:
+          path: tax
+          method: post
+          cors: true
