@@ -77,7 +77,6 @@ async function taxMoltin(items, cartData) {
     tax
   );
   console.log("tax applied", taxApplied);
-  //TODO now post that for each item to /cart/cart-item/taxes
   return taxApplied;
 }
 
