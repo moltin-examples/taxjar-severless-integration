@@ -64,8 +64,6 @@ async function getTaxAmount(zipCode) {
 async function taxMoltin(items, cartData) {
   //get tax rate form taxjar
   const taxObject = await getTaxAmount(cartData.zipcode);
-  console.log(taxObject);
-  console.log(Number(taxObject.state_rate));
 
   const tax = {
     type: "tax_item",
